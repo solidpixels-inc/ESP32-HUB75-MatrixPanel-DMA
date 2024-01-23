@@ -6,7 +6,7 @@ cmake_minimum_required(VERSION 3.5)
 idf_build_get_property(target IDF_TARGET)
 
 if(ARDUINO_ARCH_ESP32 OR CONFIG_ESP32_HUB75_USE_GFX)
-    list(APPEND build_dependencies arduino Adafruit-GFX-Library)
+    list(APPEND build_dependencies arduino Adafruit-GFX-Library esp_lcd)
 else()
     list(APPEND build_dependencies esp_lcd driver)
 endif()
